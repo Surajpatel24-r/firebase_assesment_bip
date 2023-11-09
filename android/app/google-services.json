@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "886194620732",
+    "project_id": "assesmentbangaluru",
+    "storage_bucket": "assesmentbangaluru.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886194620732:android:a4d7745f89a12b0afeb639",
+        "android_client_info": {
+          "package_name": "com.example.firebase_assesment_bip"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtSe5sOS-aIvD9aP0rxBg-AYEXJuUuEY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
