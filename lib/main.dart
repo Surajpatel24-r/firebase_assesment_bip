@@ -7,6 +7,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'app/modules/authentication/views/otp.dart';
 import 'app/modules/base/view.dart';
 import 'app/modules/home/view.dart';
+import 'app/routes/pages.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,12 +27,10 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return GetMaterialApp(
-          // theme: AppTheme.lightTheme,
           debugShowCheckedModeBanner: false,
           title: 'UI Design',
-          // initialRoute: '/',
-          // getPages: GetPages.pages,
-          home: AppBase(),
+          initialRoute: '/',
+          getPages: GetPages.pages,
         );
       },
     );

@@ -18,35 +18,15 @@ class AuthScreenController extends GetxController {
 
   final loginFormKey = GlobalKey<FormState>();
   final otpFormKey = GlobalKey<FormState>();
-  final onboardingFormKey = GlobalKey<FormState>();
 
   //mobile auth
   final numberEditingController = TextEditingController();
   final otpEditingController = TextEditingController();
-  TextEditingController fullNameController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
 
   // Setter Getter
   var isLoading = false.obs;
   void setLoading(bool value) {
     isLoading.value = value;
-  }
-
-  Rx<Country> selectedCountry = Country(
-    phoneCode: "91",
-    countryCode: "IN",
-    e164Sc: 0,
-    geographic: true,
-    level: 1,
-    name: "India",
-    example: "India",
-    displayName: "India",
-    displayNameNoCountryCode: "IN",
-    e164Key: "",
-  ).obs;
-
-  void onSelectCountry(Country country) {
-    selectedCountry.value = country;
   }
 
   void phoneNumberAuthentication() async {
@@ -59,8 +39,7 @@ class AuthScreenController extends GetxController {
         "Failed",
       );
     } else {
-      _firebaseProvider
-          .verifyPhoneNumber("+${selectedCountry.value.phoneCode}$mobile");
+      _firebaseProvider.verifyPhoneNumber("+91$mobile");
       isLoading.value = false;
     }
     isLoading.value = false;
